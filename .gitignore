@@ -31,10 +31,6 @@ out/
 .DS_Store
 Thumbs.db
 
-# Supabase (si generas types desde Supabase CLI)
-supabase/.temp/
-supabase/migrations/.temp/
-
 # Optional: test coverage
 coverage/
 
