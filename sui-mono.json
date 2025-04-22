@@ -1,0 +1,12 @@
+{
+  "packages": ["apps/*", "packages/*"],
+  "workspace": {
+    "name": "aerolux-travel",
+    "version": "1.0.0"
+  },
+  "publish": "https://npm.pkg.github.com",
+  "scope": "@aerolux",
+  "commitConventional": true,
+  "branch": "main",
+  "versioning": "incremental"
+}
