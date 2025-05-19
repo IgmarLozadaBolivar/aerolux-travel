@@ -1,0 +1,4 @@
+@import "@repo/fonts";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,223 @@
+---
+import React from 'react';
+import { Header } from '@repo/ui/headers/headerMain';
+import { Navigation } from '@repo/ui/headers/navigation';
+import { Button } from '@repo/ui/button';
+import { Anchor } from '@repo/ui/headers/anchor';
+import { MenuItems } from '@repo/ui/headers/menuItems';
+import { ItemList } from '@repo/ui/headers/itemList';
+import { Image } from 'astro:assets';
+import Logo_Icon from '@repo/assets/public/logos/logo.svg';
+import Right_Arrow_Icon from '@repo/assets/public/icons/Right_Arrow.svg';
+import Flag_Spain_Icon from '@repo/assets/public/icons/Flag Spain Icon.svg';
+import Profile_Icon from '@repo/assets/public/icons/Icon Profile.svg';
+import Lines_Img from '@repo/assets/public/images/lines-bg.svg';
+import Top_Image_Left from '@repo/assets/public/images/islands.webp';
+import Intermediate_Image_Right from '@repo/assets/public/images/torre.webp';
+import Bottom_Image_Left from '@repo/assets/public/images/cloud-gate.jpg';
+---
+
+<Header className = { 'font-cabinRegular' } >
+
+    <!-- CONTENT HEADER FOR NAVIGATION AS LOGO, ITEMS AND VARIOUS BUTTONS -->
+    <div class = "content-header flex items-center justify-between gap-10 pl-14 pr-14">
+
+        <!-- ELEMENTS LEFT - display flex, align-items center gap 40px -->
+        <div class = "elements-left nav-items flex items-center gap-10">
+
+            <div class="logo">
+                <Image
+                    class = { 'size-24' }
+                    src = { Logo_Icon }
+                    alt = { 'logo_icon' }
+                    loading = { 'eager' }
+                    decoding = { 'async' }
+                />
+            </div>
+
+            <!-- color #333333, display flex -->
+            <Navigation className = { "text-[#333333] flex" } >
+
+                <!-- display flex, gap 32px -->
+                <MenuItems className = { "flex gap-8 font-cabinRegular" } >
+
+                    <!-- flex-1 1 1 0% -->
+                    <ItemList className = { "flex-1" } >
+                        <Anchor className = { "" } href = { "#" } text = { "Reservas" } />
+                    </ItemList>
+
+                    <!-- flex-1 1 1 0% -->
+                    <ItemList className = { "flex-1" } >
+                        <Anchor className = { "" } href = { "#" } text = { "Servicios" } />
+                    </ItemList>
+
+                    <!-- flex-1 1 1 0% -->
+                    <ItemList className = { "flex-1" } >
+                        <Anchor className = { "" } href = { "#" } text = { "Ranking" } />
+                    </ItemList>
+
+                    <!-- flex-1 1 1 0% -->
+                    <ItemList className = { "flex-1" } >
+                        <Anchor className = { "" } href = { "#" } text = { "Nosotros" } />
+                    </ItemList>
+
+                    <!-- flex-1 1 1 0% -->
+                    <ItemList className = { "flex-1" } >
+                        <Anchor className = { "" } href = { "#" } text = { "Soporte" } />
+                    </ItemList>
+
+                </MenuItems>
+
+            </Navigation>
+
+        </div>
+
+        <!-- ELEMENTS RIGHT - display flex, align-items, gap 40px -->
+        <div class = "elements-right flex items-center gap-10">
+
+            <Button
+                appName = { "AeroLux" }
+                className = {
+                    "font-cabinBold " + // font-family: cabin bold
+                    "text-[0.75rem] " + // font-size: 12px
+                    "flex " + // display: flex
+                    "justify-center " + // justify-content: center
+                    "items-center " + // align-items: center
+                    "gap-1 " + // gap: 4px
+                    "border-2 " + // border-with: 2px
+                    "border-[#000000] " + // border-color: #000000
+                    "p-2.5 " + // padding: 10px
+                    "pr-3 " + // padding-right: 12px
+                    "pl-3 " // padding-left: 12px
+                }
+            >
+                <span>BUSCAR VUELOS</span>
+                <Image
+                    class = { 'size-4' }
+                    src = { Right_Arrow_Icon }
+                    alt = { 'right_arrow_icon' }
+                    loading = { 'eager' }
+                    decoding = { 'async' }
+                />
+            </Button>
+
+            {/*<IconSelect />*/}
+
+            <!-- display flex align-items center gap 10px -->
+            <Button appName = { "AeroLux" } className = { "flex items-center gap-2.5" } >
+                <Image
+                    class = { 'size-5' }
+                    src = { Flag_Spain_Icon }
+                    alt = { 'flag_spain_icon' }
+                    loading = { 'eager' }
+                    decoding = { 'async' }
+                />
+                <span>EUR - Є</span>
+            </Button>
+
+            <Button appName = { "Button Icon Profile" } >
+                <Image
+                    class = { 'size-12' }
+                    src = { Profile_Icon }
+                    alt = { 'profile_icon' }
+                    loading = { 'eager' }
+                    decoding = { 'async' }
+                />
+            </Button>
+        </div>
+    </div>
+</Header>
+
+<div class = "hero-section relative  pt-[3.5rem]">
+    <!-- Background -->
+    <Image
+        class = { 'absolute w-full inset-0  pt-[5.625rem]' }
+        src = { Lines_Img }
+        alt = { 'lines_back_img' }
+        loading = { 'eager' }
+        decoding = { 'async' }
+    />
+
+    <!-- Content Hero Section -->
+    <!-- GRID 1 COLUM & 3 ROWS -->
+    <div class = { 'content-elements grid grid-cols-none grid-rows-3 gap-y-20 gap-0 relative z-10 place-content-center' } >
+
+        <!-- ELEMENTS TOP - COLUMN 1 & ROW 1 -->
+        <div class = { 'content-elements-top flex items-center col-span-1 row-start-1 row-end-2 gap-20' } >
+
+            <!-- ELEMENTS LEFT -->
+            <div class = { 'elements-left' } >
+                <div class = { 'w-[25rem] h-[11.25rem] overflow-hidden rounded-full' } >
+                    <Image
+                        class = { 'w-full h-full object-cover' }
+                        src = { Top_Image_Left }
+                        alt = "islands-top-element-left"
+                        loading = "eager"
+                        decoding = "async"
+                    />
+                </div>
+            </div>
+
+            <!-- ELEMENTS RIGHT -->
+            <div class = { 'elements-right pointer-events-none' } >
+                <p class = { 'font-cabinRegular text-[1.25rem] ml-24 text-[#78858F]' } >
+                    IMMERSIVE EXPERIENCE
+                </p>
+                <h1 class = { 'font-reaktifBold text-[11.875rem] select-none leading-[11.875rem] text-[#333333]' } >
+                    Aero Lux
+                </h1>
+            </div>
+
+        </div>
+
+        <!-- ELEMENTS INTERMEDIATE - COLUMN 1 & ROW 2 -->
+        <div class = { 'content-elements-intermediate flex items-center col-span-1 row-start-2 row-end-3 gap-20' } >
+
+            <!-- ELEMENTS LEFT -->
+            <div class = { 'elements-left' } >
+                <h1 class = { 'font-reaktifNews text-[11.25rem] select-none leading-[11.875rem] text-[#333333]' } >
+                    for the
+                </h1>
+            </div>
+
+            <!-- ELEMENTS RIGHT -->
+            <div class = { 'elements-right' } >
+                <div class = { 'w-[37.5rem] h-[11.25rem] overflow-hidden rounded-br-[999px] rounded-l-[999px]' } >
+                    <Image
+                        class = { 'w-full h-full object-cover' }
+                        src = { Intermediate_Image_Right }
+                        alt = "torre-intermediate-element-right"
+                        loading = "eager"
+                        decoding = "async"
+                    />
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ELEMENTS BOTTOM - COLUMN 1 & ROW 3 -->
+        <div class = { 'content-elements-bottom flex items-center col-span-1 row-start-3 row-end-4 gap-20' } >
+
+            <!-- ELEMENTS LEFT -->
+            <div class = { 'elements-left' } >
+                <div class = { 'w-[37.5rem] h-[11.25rem] overflow-hidden rounded-bl-[999px] rounded-r-[999px]' } >
+                    <Image
+                        class = { 'w-full h-full object-cover' }
+                        src = { Bottom_Image_Left }
+                        alt = "cloud-gate-bottom-element-left"
+                        loading = "lazy"
+                        decoding = "async"
+                    />
+                </div>
+            </div>
+
+            <!-- ELEMENTS RIGHT -->
+            <div class = { 'elements-right' } >
+                <h1 class = { 'font-reaktifBold text-[10rem] select-none leading-[11.875rem] text-[#333333]' } >
+                    Tourism
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</div>

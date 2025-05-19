@@ -1,0 +1,107 @@
+---
+import React from 'react';
+import { Image } from "astro:assets";
+import Lines_Img from '@repo/assets/public/images/lines-bg.svg';
+import Img_Socio_I_Car from '@repo/assets/public/logos/i-car.svg';
+import Img_Socio_Hertz from '@repo/assets/public/logos/hertz.svg';
+import Img_Socio_IHG from '@repo/assets/public/logos/ihg.svg';
+import Img_Socio_Accor_All from '@repo/assets/public/logos/accor-all.svg';
+import Img_Socio_Avis from '@repo/assets/public/logos/avis.svg';
+import Img_Socio_Jatris from '@repo/assets/public/logos/jatri.svg';
+import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
+---
+
+<div class = { 'search-content font-cabinRegular relative' } >
+    <Image
+        class = { 'absolute w-full inset-0 pt-[5.625rem]' }
+        src = { Lines_Img }
+        alt = { 'lines_back_img' }
+        loading = { 'eager' }
+        decoding = { 'async' }
+    />
+
+    <div class="bg-image h-[6.25rem] pt-[5.625rem]">
+        <div class = { 'container-img relative' } >
+            <Image
+                    class = { 'w-full h-full object-cover' }
+                    src = { Bg_Image_Search }
+                    alt = "bg-image-search"
+                    loading = "lazy"
+                    decoding = "async"
+            />
+        </div>
+        <div class="bg-white-lines pl-12 pr-12 flex col-span-6 row-start-1 gap-20 relative">
+            <div class="img-socio-1 w-[18.75rem] h-[8.75rem]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_I_Car }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-2 w-[18.75rem] h-[8.75rem]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Hertz }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-3 w-[13.75rem] h-[6.25rem]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_IHG }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-4 w-[13.75rem] h-[8.75rem]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Accor_All }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-5 w-[16.25rem] h-[8.75rem]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Avis }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-6 w-[12.5rem] h-[8.75rem]">
+                <div class = { 'container-img' } >
+                    <Image
+                        class = { 'w-full h-full object-cover' }
+                        src = { Img_Socio_Jatris }
+                        alt = "socio-one-i-car"
+                        loading = "lazy"
+                        decoding = "async"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 class="induction relative">
+        Tu próxima aventura está a un clic
+    </h1>
+</div>
