@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@repo/ui/*": [
+        "packages/ui/src/*"
+      ],
+      "@componentsAstro/*": [
+        "apps/landing/src/components/*"
+      ],
+      "@layoutsAstro/*": [
+        "apps/landing/src/layouts/*"
+      ],
+      "@stylesAstro/*": [
+        "apps/landing/src/styles/*"
+      ],
+      "@repo/fonts/*": [
+        "packages/fonts/*"
+      ],
+      "@repo/assets/*": [
+        "packages/assets/*"
+      ]
+    }
+  },
+  "include": [
+    "apps",
+    "packages"
+  ]
+}

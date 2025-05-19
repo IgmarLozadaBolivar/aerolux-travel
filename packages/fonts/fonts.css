@@ -1,0 +1,41 @@
+/* Reaktif Font Family */
+@font-face {
+    font-family: 'Reaktif Bold'; /* Bold */
+    src: url('Reaktif-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reaktif News'; /* News */
+    src: url('Reaktif-News.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reaktif Semibold'; /* Semibold */
+    src: url('Reaktif-Semibold.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Cabin Font Family */
+@font-face {
+    font-family: 'Cabin Regular'; /* Regular */
+    src: url('Cabin-Regular.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabin Bold'; /* Bold */
+    src: url('Cabin-Bold.ttf') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

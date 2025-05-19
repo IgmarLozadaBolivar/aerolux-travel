@@ -1,8 +1,15 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": [
+    "@repo/typescript-config/react-library.json",
+    "../../tsconfig.json"
+  ],
   "compilerOptions": {
-    "outDir": "dist"
+    "types": ["astro/client"],
+    "outDir": "dist",
+    "paths": {
+      "@/*": [ "./src" ]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "astro.config.mjs"],
   "exclude": ["node_modules", "dist"]
 }
