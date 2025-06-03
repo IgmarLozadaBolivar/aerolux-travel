@@ -1,5 +1,6 @@
 ---
 import React from 'react';
+import { BadgeInfo } from 'lucide-react';
 import { Image } from "astro:assets";
 import Lines_Img from '@repo/assets/public/images/lines-bg.svg';
 import Img_Socio_I_Car from '@repo/assets/public/logos/i-car.svg';
@@ -9,29 +10,77 @@ import Img_Socio_Accor_All from '@repo/assets/public/logos/accor-all.svg';
 import Img_Socio_Avis from '@repo/assets/public/logos/avis.svg';
 import Img_Socio_Jatris from '@repo/assets/public/logos/jatri.svg';
 import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
+import { CheckedButton } from '@repo/ui/form-flights/radiobutton';
+import { FlightTypeSelector } from '@repo/ui/form-flights/flighttypeselector';
+import Combos from '@repo/ui/form-flights/combobox';
+import { PrimeReactProvider } from 'primereact/api';
 ---
 
 <div class = { 'search-content font-cabinRegular relative' } >
     <Image
-        class = { 'absolute w-full inset-0 pt-[5.625rem]' }
+        class = { 'absolute w-full inset-0' }
         src = { Lines_Img }
         alt = { 'lines_back_img' }
-        loading = { 'eager' }
+        loading = { 'lazy' }
         decoding = { 'async' }
     />
 
-    <div class="bg-image h-[6.25rem] pt-[5.625rem]">
-        <div class = { 'container-img relative' } >
+    <div class = { 'container gap-5 flex-wrap max-w-full' }>
+        <div class = { 'bg-image w-full h-[37.5rem] pt-[5.625rem] relative' }>
             <Image
                     class = { 'w-full h-full object-cover' }
                     src = { Bg_Image_Search }
-                    alt = "bg-image-search"
-                    loading = "lazy"
-                    decoding = "async"
+                    alt = 'bg_image_search'
+                    loading = 'lazy'
+                    decoding = 'async'
             />
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+                <div class="w-[1000px] flex flex-col gap-9">
+                    <div class="title">
+                        <h1 class="font-reaktifBold text-4xl text-start">Tu próxima aventura está a un clic</h1>
+                    </div>
+
+                    <div class="form-search relative z-10 bg-[#EFF3F6]/60 w-full h-[150px] rounded-2xl">
+                        <div class="form-content relative w-full h-full px-6 pt-4">
+                            <div class="elements-top mb-2 flex items-center gap-16 pr-4 pl-4">
+                                <div class="group-button flex items-center justify-center bg-white w-[250px] h-[40px] border-[#E0E4E7] rounded-3xl">
+                                    <FlightTypeSelector className = { 'flex gap-4' } />
+                                </div>
+                                <div class="button-message flex gap-16">
+                                    <CheckedButton
+                                        className = { 'checkbox bg-[#FFFFFF] border-[#667085] checked:bg-[#FFFFFF] checked:text-[#037980] checked:border-[#037980]' }
+                                        type = { 'checkbox' }
+                                        name = { 'accumulate_points' }
+                                        value = { 'Quiero acumular Aeropoints' }
+                                    />
+
+                                    <div class="message flex items-center justify-center bg-white rounded-3xl gap-2 w-[320px] h-[40px]">
+                                        <BadgeInfo color = { '#F76C6C' } size = { 20 } />
+                                        <p class="text-black">
+                                            Por favor, <a href="#" class="text-[#F76C6C] underline">iniciar sesión</a> para acumular.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="elements-bottom absolute left-0 right-0 mx-auto top-[70px] w-full h-[80px] bg-white rounded-2xl shadow-md z-20 flex items-center px-4">
+                                <div class="selectors-cities">
+                                    <PrimeReactProvider>
+                                        <Combos />
+                                    </PrimeReactProvider>
+                                </div>
+                                <div class="selectors-dates">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-white-lines pl-12 pr-12 flex col-span-6 row-start-1 gap-20 relative">
-            <div class="img-socio-1 w-[18.75rem] h-[8.75rem]">
+        <div class="socios flex gap-10 flex-nowrap max-w-full relative pt-28 justify-center pl-20 pr-20">
+            <div class="img-socio-1 w-[250px] h-[100px]">
                 <div class = { 'container-img' } >
                     <Image
                             class = { 'w-full h-full object-cover' }
@@ -42,7 +91,7 @@ import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
                     />
                 </div>
             </div>
-            <div class="img-socio-2 w-[18.75rem] h-[8.75rem]">
+            <div class="img-socio-2 w-[270px] h-[100px]">
                 <div class = { 'container-img' } >
                     <Image
                             class = { 'w-full h-full object-cover' }
@@ -53,7 +102,7 @@ import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
                     />
                 </div>
             </div>
-            <div class="img-socio-3 w-[13.75rem] h-[6.25rem]">
+            <div class="img-socio-3 w-[200px] h-[100px]">
                 <div class = { 'container-img' } >
                     <Image
                             class = { 'w-full h-full object-cover' }
@@ -64,7 +113,7 @@ import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
                     />
                 </div>
             </div>
-            <div class="img-socio-4 w-[13.75rem] h-[8.75rem]">
+            <div class="img-socio-4 w-[180px] h-[100px]">
                 <div class = { 'container-img' } >
                     <Image
                             class = { 'w-full h-full object-cover' }
@@ -75,7 +124,7 @@ import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
                     />
                 </div>
             </div>
-            <div class="img-socio-5 w-[16.25rem] h-[8.75rem]">
+            <div class="img-socio-5 w-[230px] h-[100px]">
                 <div class = { 'container-img' } >
                     <Image
                             class = { 'w-full h-full object-cover' }
@@ -86,22 +135,17 @@ import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
                     />
                 </div>
             </div>
-            <div class="img-socio-6 w-[12.5rem] h-[8.75rem]">
+            <div class="img-socio-6 w-[180px] h-[100px]">
                 <div class = { 'container-img' } >
                     <Image
-                        class = { 'w-full h-full object-cover' }
-                        src = { Img_Socio_Jatris }
-                        alt = "socio-one-i-car"
-                        loading = "lazy"
-                        decoding = "async"
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Jatris }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
                     />
                 </div>
             </div>
         </div>
     </div>
-
-
-    <h1 class="induction relative">
-        Tu próxima aventura está a un clic
-    </h1>
 </div>
